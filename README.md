@@ -12,6 +12,11 @@
 	```
 	npm install -g grunt-cli
 	```
+* Install bower (frontend package manager)
+
+	```
+	npm install -g bower
+	```
 
 ### Running
 
