@@ -1,0 +1,22 @@
+{
+	"sendto": "api/vertraege/id/finanzierungsdaten",
+	"nextstep": "prototype/data/vertraege_id_details.json",
+	"directive": "formly",
+	"fields":[
+		{
+			"key": "preis_o_ust",
+			"type": "number",
+			"label":"Preis ohne Ust",
+			"placeholder": "0.00",
+			"description":"Preis ohne USt.",
+			"required": true
+		}, {
+			"key": "preis_m_ust",
+			"type": "number",
+			"label": "Preis mit Ust",
+			"placeholder": "0.00",
+			"required": true,
+			"description":"Preis mit USt.(derzeit 19%)"
+		}
+	]
+}

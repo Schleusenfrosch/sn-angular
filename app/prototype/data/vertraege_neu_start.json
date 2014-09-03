@@ -1,0 +1,39 @@
+{
+	"sendto": "api/vertraege/id/objektauswahl",
+	"nextstep": "prototype/data/vertraege_id_finanzierungsdaten.json",
+	"directive": "formly",
+	"step": "Objektauswahl",
+	"fields":[
+		{
+		"key": "profile",
+		"type": "select",
+		"label": "Profile",
+		"description":"Bitte wählen Sie das Profil aus, in dem Sie ein Angebot oder einen Vertrag erstellen möchten",
+		"options": [
+			{
+				"name": "CoC Bau",
+				"value": "cocbau"
+			}, {
+				"name": "Michels GmbH & Co. KG",
+				"value": "michelsgmbh&co.kg"
+			}, {
+				"name": "Kubato 2011",
+				"value": "kubato2011",
+				"group": "Händler"
+			}, {
+				"name": "Kramer Werke GmbH",
+				"value": "kramerwerkegmbH",
+				"group": "Händler"
+			}, {
+				"name": "XyZ",
+				"value": "xyz",
+				"group": "andere Gruppe"
+			}, {
+				"name": "AbC",
+				"value": "abc",
+				"group": "andere Gruppe"
+			}
+		]
+		}
+	]
+}

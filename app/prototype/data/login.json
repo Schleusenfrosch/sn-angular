@@ -1,0 +1,39 @@
+{
+	"sendto": "api/vertraege/new",
+	"nextstep": "prototype/data/vertraege_id_konditionen.json",
+	"directive": "formly",
+	"step": "Neuen Vertrag anlegen",
+	"fields":[
+		{
+			"key": "name",
+			"type": "text",
+			"label":"First Name",
+			"placeholder": "Type in your name",
+			"required": true
+		}, {
+			"key": "lastName",
+			"type": "text",
+			"label": "Last Name",
+			"placeholder": "Type in your last name",
+			"hideExpression": "!name",
+			"required": true
+		},
+		{
+			"key": "password",
+			"type": "password",
+			"label": "password",
+			"hideExpression": "!lastName || !name",
+			"required": true
+		}, {
+	        "key": "repeatPassword",
+	        "type": "password",
+	        "label": "Repeat Password",
+	        "required": true,
+	        "hideExpression": "!lastName || !name || !password",
+	        "validators": {
+	            "name": "noMatch",
+	            "validate": "value === result.password"
+	        }
+    	}
+	]
+}

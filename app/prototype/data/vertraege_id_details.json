@@ -1,0 +1,30 @@
+{
+	"sendto": "api/vertraege/id/details",
+	"nextstep": "prototype/data/vertraege_id.json",
+	"directive": "formly",
+	"fields":[
+		{
+			"key": "1",
+			"type": "text",
+			"label":"Info1",
+			"placeholder": "Type in Info 1",
+			"required": true
+		}, {
+			"key": "2",
+			"type": "text",
+			"label": "Info 2",
+			"required": true
+		},{
+			"key": "3",
+			"type": "text",
+			"label":"Info 3",
+			"placeholder": "Type in Info 3",
+			"required": true
+		}, {
+			"key": "4",
+			"type": "text",
+			"label": "Info 4",
+			"required": true
+		}
+	]
+}

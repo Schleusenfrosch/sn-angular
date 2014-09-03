@@ -1,0 +1,11 @@
+{
+	"fields":[
+		{
+		"type":"search",
+		"placeholder":"Was wollen sie tun?",
+		"datasource":"prototype/data/input_service.json"
+		}
+
+	]
+
+}

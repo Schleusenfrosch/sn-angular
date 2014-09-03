@@ -1,0 +1,20 @@
+{
+  "name": "prototype",
+  "version": "0.0.1",
+  "authors": [
+    "dkaufmann <dkaufmann@s-und-n.de>"
+  ],
+  "description": "AngularJS directive which takes JSON representing a form and renders to HTML",
+  "dependencies": {
+    "angular": "~1.2.23"
+  },
+  "devDependencies": {
+    "angular-ui-router": "#0.2.11",
+    "angular-highlightjs": "~0.2.1",
+    "highlightjs": "~8.0.0",
+    "bootstrap": "~3.1.1",
+    "angular-resource": "~1.2.x",
+    "angular-bootstrap": "0.11.0"
+  },
+  "appPath": "app"
+}

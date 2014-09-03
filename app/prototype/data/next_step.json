@@ -1,0 +1,32 @@
+{
+	"process": "Vertrag erstellen",
+	"step_number": 1,
+	"response":{
+		"url":"url",
+		"resource":"products",
+		"method":"GET"
+	},
+	"fields":[
+		{
+			"key": "first",
+			"type": "text",
+			"label":"First Name",
+			"placeholder": "Jane",
+			"required": true
+		}, {
+			"key": "second",
+			"type": "text",
+			"label": "Last Name",
+			"placeholder": "Doe"
+		}, {
+			"key": "third",
+			"type": "text",
+			"placeholder": "bla@bla.de"
+		}, {
+			"key": "third",
+			"type": "text",
+			"placeholder": "bla@bla.de"
+		}
+
+	]
+}

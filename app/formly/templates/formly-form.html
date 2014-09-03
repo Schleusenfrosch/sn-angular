@@ -1,0 +1,16 @@
+<form class="formly" role="form" novalidate>
+	<formly-field ng-repeat="field in fields"
+				  options="field"
+				  form-result="result"
+				  form-id="options.uniqueFormId"
+				  index="$index"
+				  ng-if="!field.hide">
+	</formly-field>
+	<div ng-transclude> </div>
+	<!-- <button type="submit"
+			class="btn btn-primary"
+			ng-hide="options.hideSubmit"
+			ng-disabled="!myFormName.$valid">
+		{{options.submitCopy || "Submit"}}
+	</button> -->
+</form>

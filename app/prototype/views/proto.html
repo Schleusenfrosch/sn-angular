@@ -1,0 +1,79 @@
+<div class="jumbotron">
+	<div class="container">
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4">
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4">
+		<!-- ########################################################################################### -->
+		<!-- Relevante Form!!! -->
+			<!-- History -->
+			<div class="well" id="history" ng-show="userHistory.length">
+				<p ng-repeat="action in userHistory">{{action.time | date:"HH:mm:ss" + " :"}} {{action.action}} </p>
+			</div>
+			<!-- User input  -->
+			<div class="well">
+				<input type="text" name="userInput" id="input#" class="form-control" ng-model="selected" ng-change="setSelected(selected)"
+				ng-keypress="sendSearchInput($event)" placeholder="was möchten sie?" typeahead="action for action in getActions($viewValue)| limitTo:8"
+				typeahead-loading="loadingSearch" autofocus ng-disabled="formFields.length">
+				<i ng-show="loadingSearch" class="glyphicon glyphicon-refresh"></i>
+			</div>
+
+			<!-- forms -->
+			<div class="panel panel-default" ng-if="formFields.length">
+			<div class="panel-heading"><h4>{{data.step}}</h4></div>
+				<div class="panel-body">
+						<formly-form name="myFormName"
+						             result="formData"
+						             fields="formFields"
+						             options="formOptions"
+						             ng-submit="onSubmit()">
+						    <button type="submit"class="btn btn-primary" ng-disabled="!myFormName.$valid">Submit</button>
+						    <button type="button"class="btn btn-warning" ng-click="cancel()">Cancel</button>
+						    <span class="pull-right"> * required field </span>
+						</formly-form>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4">
+
+			<h3>Submitted Data</h3>
+			<div hljs source="formData|json"></div>
+
+			<h3>Form State</h3>
+			<table class="table table-condensed">
+				<thead>
+				<tr>
+					<th>State</th>
+					<th>Value</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>$pristine</td>
+					<td>{{myFormName.$pristine}}</td>
+				</tr>
+				<tr>
+					<td>$dirty</td>
+					<td>{{myFormName.$dirty}}</td>
+				</tr>
+				<tr>
+					<td>$valid</td>
+					<td>{{myFormName.$valid}}</td>
+				</tr>
+				<tr>
+					<td>$invalid</td>
+					<td>{{myFormName.$invalid}}</td>
+				</tr>
+				<tr>
+					<td>$error</td>
+					<td>{{myFormName.$error}}</td>
+				</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+</div>
