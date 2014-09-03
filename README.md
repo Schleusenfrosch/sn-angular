@@ -15,11 +15,13 @@
 
 * Clone Git repo.
 * Switch to install folder and run
+
 	```
 	npm ínstall
 	bower install
 	```
 * Run to start the local dev server
+
  	```
 	grunt dev
 	```
