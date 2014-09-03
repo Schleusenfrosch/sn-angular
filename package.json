@@ -1,20 +1,6 @@
 {
-  "name": "angular-formly",
-  "version": "0.0.14",
-  "author": "Astrism <astrisms@gmail.com>",
-  "homepage": "http://nimbly.github.io/angular-formly/",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/nimbly/angular-formly.git"
-  },
   "main": "dist/formly.min.js",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.githubusercontent.com/nimbly/angular-formly/master/LICENSE"
-    }
-  ],
-  "description": "AngularJS directive which takes JSON representing a form and renders to HTML",
+  "description": "Prototype",
   "devDependencies": {
     "grunt-gh-pages": "~0.9.0",
     "bower": "1.2.7",
