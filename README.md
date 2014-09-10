@@ -28,4 +28,6 @@
 	grunt dev
 	```
 
+### Access
 
+you can access the prototype via localhost:4000/#/proto
