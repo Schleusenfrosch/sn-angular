@@ -21,6 +21,7 @@
 	```
 	npm ínstall
 	bower install
+	npm install -g grunt-cli
 	```
 * Run to start the local dev server
 
