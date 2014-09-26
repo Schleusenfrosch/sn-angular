@@ -17,5 +17,6 @@
 		   ng-minlength="{{options.minlength}}"
 		   ng-maxlength="{{options.maxlength}}"
 		   ng-model="result[options.key || index]">
+   <p ng-if="options.formField.$invalid" class=" has-error help-block">Bitte nur Zahlen eingeben</p>
    <p id="{{id}}_description" class="help-block" ng-if="options.description">{{options.description}}</p>
 </div>

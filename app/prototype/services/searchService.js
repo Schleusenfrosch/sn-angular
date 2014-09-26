@@ -3,6 +3,7 @@ app.factory('SearchService',['$http','$log','$filter', function($http,$log,$filt
 	//Auswahl für auto suggest
 	var newPossibleActions = [];
 
+	//Action names und die jeweiligen Entrypoints
 	var unfilteredActions =[];
 	var selectedAction;
 
@@ -28,12 +29,13 @@ app.factory('SearchService',['$http','$log','$filter', function($http,$log,$filt
 						}
 						//filterung des arrays mit $filter service von angular. Das Ergbnis ist ein gefiltertes Array
 						newPossibleActions = $filter('filter')(newPossibleActions,searchString);
-						return newPossibleActions;
+						return angular.copy(newPossibleActions);
 					});
 				}
 				else{
 					//leeres Array wenn length <3 um exception zu vermeiden
-					return newPossibleActions;
+					newPossibleActions = [];
+					return angular.copy(newPossibleActions);
 				}
 		},
 		getAction: function(actionName){

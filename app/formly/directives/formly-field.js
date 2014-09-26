@@ -36,6 +36,14 @@ angular.module('formly.render')
 		controller: function fieldController($scope) {
 			$scope.options = $scope.optionsData();
 			var type = $scope.options.type;
+			//Inhalt des Feldes, dass vom Server bereits gefüllt wurde
+			var value = $scope.options.value;
+			//Name des Feldes
+			var key = $scope.options.key;
+			if(value !== undefined){
+				$scope.result[key] = value;
+			}
+
 			if (!type && $scope.options.template) {
 				type = 'template';
 			} else if (!type && $scope.options.templateUrl) {

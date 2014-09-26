@@ -1,5 +1,5 @@
 'use strict';
-app.controller('DemoCtrl',['$scope', '$parse','$log','$window','formlyOptions', function($scope, $parse,$log,$window,formlyOptions) {
+app.controller('DemoCtrl',['$scope', '$parse','$log','$window', function($scope, $parse,$log,$window) {
 	// Public Methods
 	$scope.onSubmit = function onSubmit() {
 		$scope.submittedData = $scope.formData;
@@ -11,7 +11,7 @@ app.controller('DemoCtrl',['$scope', '$parse','$log','$window','formlyOptions', 
 		return result;
 	};
 
-	$scope.preConfiguredOptions = formlyOptions.getOptions();
+	
 
 	$scope.formFields = [{
 		key: 'firstName',

@@ -7,8 +7,8 @@
 		<div class="col-sm-4 col-md-4 col-lg-4">
 		</div>
 		<div class="col-sm-4 col-md-4 col-lg-4">
-		<!-- ########################################################################################### -->
-		<!-- Relevante Form!!! -->
+			<!-- ########################################################################################### -->
+			<!-- Relevante Form!!! -->
 			<!-- History -->
 			<div class="well" id="history" ng-show="userHistory.length">
 				<p ng-repeat="action in userHistory">{{action.time | date:"HH:mm:ss" + " :"}} {{action.action}} </p>
@@ -21,27 +21,22 @@
 				<i ng-show="loadingSearch" class="glyphicon glyphicon-refresh"></i>
 			</div>
 
-			<!-- forms -->
-			<div class="panel panel-default" ng-if="formFields.length">
-			<div class="panel-heading"><h4>{{data.step}}</h4></div>
+			<div class="panel panel-default" ng-if="formFields.length" >
+				<div class="panel-heading"><h4>{{data.step}}</h4></div>
 				<div class="panel-body">
-						<formly-form name="myFormName"
-						             result="formData"
-						             fields="formFields"
-						             options="formOptions"
-						             ng-submit="onSubmit()">
-						    <button type="submit"class="btn btn-primary" ng-disabled="!myFormName.$valid">Submit</button>
-						    <button type="button"class="btn btn-warning" ng-click="cancel()">Cancel</button>
-						    <span class="pull-right"> * required field </span>
-						</formly-form>
-				</div>
+					<formly-form name="myFormName" result="formData" fields="formFields" options="formOptions"ng-submit="onSubmit()">
+						<button type="submit"class="btn btn-primary" ng-disabled="!(myFormName.$dirty && myFormName.$valid)">Submit</button>
+						<button type="button"class="btn btn-warning" ng-click="cancel()">Cancel</button>
+						<span class="pull-right"> * required field </span>
+					</formly-form>
 			</div>
 		</div>
-		<div class="col-sm-4 col-md-4 col-lg-4">
-
+	</div>
+	<div class="sm-4 col-md-4 col-lg-4">
 			<h3>Submitted Data</h3>
 			<div hljs source="formData|json"></div>
-
+	</div>
+	<!-- 
 			<h3>Form State</h3>
 			<table class="table table-condensed">
 				<thead>
@@ -74,6 +69,8 @@
 				</tbody>
 
 			</table>
+			-->
 		</div>
 	</div>
 </div>
+

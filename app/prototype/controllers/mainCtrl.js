@@ -38,10 +38,6 @@ app.controller('MainCtrl',['$scope', '$parse','$log','$resource' ,'SearchService
 		getNextStep();
 	};
 
-	$scope.selectChange = function(which){
-		alert('select' + which + ' changed!');
-	};
-
 	$scope.toPrettyJSON = function(obj, tabWidth) {
 		var strippedObj = angular.copy(obj);
 		var result = JSON.stringify(strippedObj, null, Number(tabWidth));
@@ -58,6 +54,7 @@ app.controller('MainCtrl',['$scope', '$parse','$log','$resource' ,'SearchService
 	function clearFormFields(){
 		$scope.formFields = {};
 		$scope.formData = {};
+		$scope.selected = undefined;
 	}
 
 	//nächsten Dialogschritt erhalten

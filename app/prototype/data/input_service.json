@@ -2,10 +2,10 @@
 	"actions":[
 		{"name":"Antrag erstellen", "entrypoint":"api/antraege/new"},
 		{"name":"Antrag bearbeiten", "entrypoint":"api/antraege/id/edit"},
-		{"name":"Antrag suchen", "entrypoint":"api/antraege/antraege/search"},
+		{"name":"Antrag suchen", "entrypoint":"api/antraege/id"},
 		{"name":"Vertrag erstellen", "entrypoint":"prototype/data/vertraege_neu_start.json"},
 		{"name":"Vertrag bearbeiten", "entrypoint":"api/vertraege/id/edit"},
-		{"name":"Vertrag suchen", "entrypoint":"api/vertraege/search"}
+		{"name":"Vertrag suchen", "entrypoint":"api/vertraege/id"}
 	]
 
 }

@@ -4,6 +4,7 @@
 		{
 			"key": "firstName",
 			"type": "text",
+			"value": "firstName",
 			"label":"First Name",
 			"placeholder": "Jane",
 			"required": true

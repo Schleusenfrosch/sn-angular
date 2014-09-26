@@ -1,8 +1,8 @@
 {
-	"sendto": "api/vertraege/id/objektauswahl",
+	"sendto": "api/vertraege/id/profile",
 	"nextstep": "prototype/data/vertraege_id_finanzierungsdaten.json",
 	"directive": "formly",
-	"step": "Objektauswahl",
+	"step": "Profilauswahl",
 	"fields":[
 		{
 		"key": "profile",
@@ -34,6 +34,38 @@
 				"group": "andere Gruppe"
 			}
 		]
-		}
+		},
+		{
+	        "key": "newUser",
+	        "type": "checkbox",
+	        "label": "new User?",
+	        "description" : "Click to sign in"
+    	},
+		{
+			"key": "email",
+	        "type": "email",
+	        "placeholder": "name@s-und-n.de",
+	        "description": "We won't spam you",
+	        "hideExpression": "!newUser",
+	        "required": true
+    	},
+    	{
+			"key": "password",
+	        "type": "password",
+	        "label" : "password",
+	        "hideExpression": "!newUser",
+	        "required": true
+    	},
+    	{
+			"key": "repeatPassword",
+	        "type": "password",
+	        "label": "repeat password",
+	        "hideExpression": "!newUser",
+	        "required": true,
+	        "validators": {
+            "name": "noMatch",
+            "validate": "value === result.password"
+        	}
+    	}
 	]
 }

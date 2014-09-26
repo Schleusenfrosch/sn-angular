@@ -2,7 +2,7 @@
 	"sendto": "api/vertraege/new",
 	"nextstep": "prototype/data/vertraege_id_konditionen.json",
 	"directive": "formly",
-	"step": "Neuen Vertrag anlegen",
+	"step": "Login",
 	"fields":[
 		{
 			"key": "name",

@@ -1,6 +1,7 @@
 'use strict';
 // Angular Init
 var app = angular.module('app', ['ng',
+	'ngAnimate',
 	'ui.router',
 	'hljs',
 	'formly',

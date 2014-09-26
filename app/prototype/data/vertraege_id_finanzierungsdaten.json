@@ -2,21 +2,41 @@
 	"sendto": "api/vertraege/id/finanzierungsdaten",
 	"nextstep": "prototype/data/vertraege_id_details.json",
 	"directive": "formly",
+	"step": "Finanzierungsdaten",
 	"fields":[
 		{
-			"key": "preis_o_ust",
+	        "key": "vertragsart",
+	        "type": "radio",
+	        "label": "Bitte Vertragsart wählen",
+	        "options": [
+	            {
+	                "name": "Leasingantrag",
+	                "value": "Leasingantrag"
+	            },
+	            {
+	                "name": "Mietkaufantrag",
+	                "value": "Mietkaufantrag",
+	                "description": "Dies ist eine Beschreibung!"
+	            }
+	        ]
+    	},
+    	{
+	        "key": "tipp",
+	        "type": "textarea",
+	        "label": "Tipp",
+	        "value": "Leasing lohnt sich nicht!",
+	        "hideExpression":"vertragsart !== \"Leasingantrag\"",
+	        "lines": 1,
+	        "disabled": true
+    	},
+
+		{
+			"key": "preis",
 			"type": "number",
-			"label":"Preis ohne Ust",
+			"label":"Preis",
 			"placeholder": "0.00",
-			"description":"Preis ohne USt.",
+			"description":"Preis",
 			"required": true
-		}, {
-			"key": "preis_m_ust",
-			"type": "number",
-			"label": "Preis mit Ust",
-			"placeholder": "0.00",
-			"required": true,
-			"description":"Preis mit USt.(derzeit 19%)"
 		}
 	]
 }
